@@ -1,6 +1,5 @@
 {
     "port": 5000,
     "jwtSecret": "shhh dont tell anyone",
-    "hashSalt": "pepper",
     "mongoURI": "mongodb+srv://ezeebreezy:Temp12345@cluster0-pamgr.azure.mongodb.net/app?retryWrites=true&w=majority"
 }
