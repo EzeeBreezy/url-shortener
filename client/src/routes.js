@@ -6,28 +6,28 @@ import { CreatePage } from './pages/CreatePage'
 import { AuthPage } from './pages/AuthPage'
 
 export const useRoutes = isAuthenticated => {
-    if (isAuthenticated) {
-        return (
-            <Switch>
-                <Route path="/links" exact>
-                    <LinksPage />
-                </Route>
-                <Route path="/create" exact>
-                    <CreatePage />
-                </Route>
-                <Route path="/detail/:id">
-                    <DetailPage />
-                </Route>
-                <Redirect to="/create" />
-            </Switch>
-        )
-    }
-    return (
-        <Switch>
-            <Route path="/" exact>
-                <AuthPage />
+   if (isAuthenticated) {
+      return (
+         <Switch>
+            <Route path="/links" exact>
+               <LinksPage />
             </Route>
-            <Redirect to="/" />
-        </Switch>
-    )
+            <Route path="/create" exact>
+               <CreatePage />
+            </Route>
+            <Route path="/detail/:id">
+               <DetailPage />
+            </Route>
+            <Redirect to="/create" />
+         </Switch>
+      )
+   }
+   return (
+      <Switch>
+         <Route path="/" exact>
+            <AuthPage />
+         </Route>
+         <Redirect to="/" />
+      </Switch>
+   )
 }
